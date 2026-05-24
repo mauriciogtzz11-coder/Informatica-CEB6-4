@@ -1,0 +1,781 @@
+/* ================================================= */
+/* ===================== RESET ===================== */
+/* ================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#050505;
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+/* ================================================= */
+/* ======================= HERO ==================== */
+/* ================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:
+    30px 7%
+    20px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ================================================= */
+/* ============ HUGE BACKGROUND TYPOGRAPHY ========= */
+/* ================================================= */
+
+.hero::before{
+
+    content:"CAPACITACIÓN";
+
+    position:absolute;
+
+    top:40px;
+    left:20px;
+
+    font-size:260px;
+
+    font-weight:900;
+
+    letter-spacing:-14px;
+
+    color:
+    rgba(255,255,255,.03);
+
+    z-index:0;
+
+    white-space:nowrap;
+
+    pointer-events:none;
+}
+
+.hero::after{
+
+    content:"DE INFORMÁTICA";
+
+    position:absolute;
+
+    bottom:0;
+    left:40px;
+
+    font-size:220px;
+
+    font-weight:900;
+
+    letter-spacing:-12px;
+
+    color:
+    rgba(255,255,255,.025);
+
+    z-index:0;
+
+    white-space:nowrap;
+
+    pointer-events:none;
+}
+
+/* ================================================= */
+/* ================= HERO CONTAINER ================ */
+/* ================================================= */
+
+.hero-container{
+
+    width:100%;
+
+    max-width:1650px;
+
+    display:grid;
+
+    grid-template-columns:
+    1.1fr
+    .9fr;
+
+    align-items:center;
+
+    gap:10px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* ================================================= */
+/* ===================== LEFT ====================== */
+/* ================================================= */
+
+.hero-left{
+
+    position:relative;
+
+    margin-top:-60px;
+}
+
+/* BADGE */
+
+.mini-badge{
+
+    color:#8b8b8b;
+
+    font-size:15px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:30px;
+}
+
+/* TITLE */
+
+.hero-left h1{
+
+    font-size:155px;
+
+    line-height:.80;
+
+    letter-spacing:-12px;
+
+    font-weight:900;
+
+    margin-bottom:28px;
+
+    color:white;
+}
+
+/* TEXT */
+
+.hero-left p{
+
+    max-width:720px;
+
+    color:#9ca3af;
+
+    font-size:24px;
+
+    line-height:1.7;
+}
+
+/* ================================================= */
+/* ===================== BUTTONS =================== */
+/* ================================================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:24px;
+
+    flex-wrap:wrap;
+}
+
+/* PRIMARY */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px 42px;
+
+    border-radius:16px;
+
+    background:white;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.primary-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    background:#d4d4d8;
+}
+
+/* SECONDARY */
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px 42px;
+
+    border-radius:16px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    background:
+    rgba(255,255,255,.03);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.secondary-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    background:
+    rgba(255,255,255,.06);
+}
+
+/* ================================================= */
+/* ================= HERO RIGHT ==================== */
+/* ================================================= */
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+}
+
+/* ================================================= */
+/* ================= HERO DECORATION =============== */
+/* ================================================= */
+
+.hero-circle{
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+    circle at center,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.02),
+    transparent 70%
+    );
+
+    border:
+    1px solid rgba(255,255,255,.04);
+
+    position:relative;
+}
+
+/* INNER RING */
+
+.hero-circle::before{
+
+    content:'';
+
+    position:absolute;
+
+    inset:80px;
+
+    border-radius:50%;
+
+    border:
+    1px solid rgba(255,255,255,.05);
+}
+
+/* CENTER LIGHT */
+
+.hero-circle::after{
+
+    content:'';
+
+    position:absolute;
+
+    inset:150px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.03);
+
+    filter:blur(10px);
+}
+
+/* ================================================= */
+/* ======================= AREAS =================== */
+/* ================================================= */
+
+.areas{
+
+    max-width:1700px;
+
+    margin:auto;
+
+    padding:
+    20px 7%
+    140px;
+
+    position:relative;
+}
+
+/* HEADER */
+
+.section-header{
+
+    margin-bottom:70px;
+
+    text-align:center;
+}
+
+.center-badge{
+
+    justify-content:center;
+}
+
+.section-header h2{
+
+    font-size:100px;
+
+    line-height:.9;
+
+    letter-spacing:-7px;
+
+    margin-bottom:20px;
+}
+
+.section-header p{
+
+    color:#9ca3af;
+
+    font-size:22px;
+
+    line-height:1.8;
+}
+
+/* ================================================= */
+/* ======================= CARDS =================== */
+/* ================================================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+}
+
+/* CARD */
+
+.card{
+
+    background:
+    #101010;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    transition:.4s;
+
+    position:relative;
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+}
+
+/* IMAGE */
+
+.card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.45s;
+}
+
+.card:hover img{
+
+    transform:scale(1.04);
+}
+
+/* CONTENT */
+
+.card-content{
+
+    padding:30px;
+}
+
+/* TAG */
+
+.card-tag{
+
+    color:#71717a;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:14px;
+}
+
+/* TITLE */
+
+.card h3{
+
+    font-size:42px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:16px;
+}
+
+/* TEXT */
+
+.card p{
+
+    color:#9ca3af;
+
+    line-height:1.9;
+
+    font-size:16px;
+}
+
+/* ================================================= */
+/* ====================== MOBILE =================== */
+/* ================================================= */
+
+@media(max-width:1200px){
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .hero-left{
+
+        margin-top:0;
+    }
+
+    .hero-left h1{
+
+        font-size:90px;
+    }
+
+    .hero::before{
+
+        font-size:120px;
+    }
+
+    .hero::after{
+
+        font-size:100px;
+    }
+
+    .section-header h2{
+
+        font-size:70px;
+    }
+
+    .hero-left p,
+    .section-header p{
+
+        font-size:18px;
+    }
+
+    .hero-circle{
+
+        width:300px;
+        height:300px;
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+}
+/* ================================================= */
+/* ================= MODERN SUBPAGES =============== */
+/* ================================================= */
+
+.modern-page{
+
+    min-height:100vh;
+
+    padding:
+    120px 7%
+    80px;
+
+    background:#050505;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ================================================= */
+/* ================= HEADER ======================== */
+/* ================================================= */
+
+.modern-header{
+
+    max-width:900px;
+
+    margin-bottom:70px;
+}
+
+/* BADGE */
+
+.modern-badge{
+
+    color:#8b8b8b;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+/* TITLE */
+
+.modern-header h1{
+
+    font-size:110px;
+
+    line-height:.85;
+
+    letter-spacing:-8px;
+
+    font-weight:900;
+
+    margin-bottom:24px;
+
+    color:white;
+}
+
+/* TEXT */
+
+.modern-header p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#9ca3af;
+
+    max-width:700px;
+
+    margin-bottom:34px;
+}
+
+/* BUTTON */
+
+.modern-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 34px;
+
+    border-radius:16px;
+
+    background:white;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+.modern-btn:hover{
+
+    transform:
+    translateY(-4px);
+}
+
+/* ================================================= */
+/* ================= GRID ========================== */
+/* ================================================= */
+
+.modern-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+}
+
+/* ================================================= */
+/* ================= CARD ========================== */
+/* ================================================= */
+
+.modern-card{
+
+    background:#101010;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,.06);
+
+    transition:.4s;
+}
+
+.modern-card:hover{
+
+    transform:
+    translateY(-8px);
+}
+
+/* IMAGE */
+
+.modern-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.modern-card:hover img{
+
+    transform:scale(1.03);
+}
+
+/* CONTENT */
+
+.modern-content{
+
+    padding:28px;
+}
+
+/* TITLE */
+
+.modern-content h3{
+
+    font-size:38px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:16px;
+}
+
+/* TEXT */
+
+.modern-content p{
+
+    color:#9ca3af;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media(max-width:1100px){
+
+    .modern-header h1{
+
+        font-size:72px;
+    }
+
+    .modern-header p{
+
+        font-size:18px;
+    }
+
+    .modern-card img{
+
+        height:220px;
+    }
+}
